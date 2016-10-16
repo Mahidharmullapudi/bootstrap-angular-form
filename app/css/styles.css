@@ -1,0 +1,16 @@
+
+.form-group.required .control-label:after {
+    font-family: 'FontAwesome';
+    font-weight: normal;
+    color:red;
+    font-size: 10px;
+    content: "\f069";
+}
+
+.form-group .help-block {
+    display:none;
+}
+
+.form-group.has-error .help-block{
+    display: block;
+}
