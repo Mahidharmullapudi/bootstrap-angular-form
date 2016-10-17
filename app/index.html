@@ -18,143 +18,233 @@
     <![endif]-->
 
 </head>
-<body ng-app="ValidationApp">
-<h1>Hello, world!</h1>
+<body>
 
-<nav class="navbar navbar-default">
+<h1 class="text-center"> SNEARS School Nutrition Electronic Reimbursement System</h1>
+<div class="container-fluid">
+    <nav class="navbar navbar-inverse ">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">SNEARS</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Program Administration</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Training</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item ">
+                        <a class="nav-link"><i class="fa fa-envelope"></i>
+                            <span class="hidden-sm">Contact</span></a>
+                    </li>
 
-</nav>
+                    <li class="nav-item ">
+                        <a class="nav-link"><i class="fa fa-comments-o"></i> <span class="hidden-sm">Support</span></a>
+                    </li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
 <section>
+    <div class="container-fluid">
+        <div class="row content">
+            <div id="wrapper">
+                <!-- Sidebar -->
+                <div id="sidebar-wrapper">
+                    <ul class="sidebar-nav">
+                        <li class="sidebar-brand">
+                            <a href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/#">
+                                Start Bootstrap
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/#">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/#">Shortcuts</a>
+                        </li>
+                        <li>
+                            <a href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/#">Overview</a>
+                        </li>
+                        <li>
+                            <a href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/#">Events</a>
+                        </li>
+                        <li>
+                            <a href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/#">About</a>
+                        </li>
+                        <li>
+                            <a href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/#">Services</a>
+                        </li>
+                        <li>
+                            <a href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /#sidebar-wrapper -->
 
-    <div class="container" ng-controller="MyController as ctrl">
-        <form name="userForm" novalidate>
-            <fieldset>
-                <legend>Personal Information</legend>
+                <div class="col-sm-8 text-left" id="page-content-wrapper"
+                     ng-app="ValidationApp" ng-controller="MyController as ctrl">
+                    <form name="userForm" novalidate>
+                        <fieldset>
+                            <legend>Personal Information</legend>
 
-                <div class="row">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <div class="form-group required" show-errors>
+                                        <label class="control-label" for="fName">First Name</label>
+                                        <input id="fName" name="firstName" class="form-control input-normal" required
+                                               ng-model="firstName">
+                                        <p class="help-block"> User First Name</p>
+                                    </div>
+                                </div>
 
-                    <div class="col-sm-5">
-                        <div class="form-group required" show-errors>
-                            <label class="control-label" for="fName">First Name</label>
-                            <input id="fName" name="firstName" class="form-control input-normal" required ng-model="firstName">
-                            <p class="help-block"> User First Name</p>
-                        </div>
+                                <div class="col-sm-5">
+                                    <div class="form-group required" show-errors>
+                                        <label class="control-label" for="lName">Last Name</label>
+                                        <input id="lName" name="lastName" class="form-control input-normal" required
+                                               ng-model="lastName">
+                                        <p class="help-block"> User Last Name</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <div class="form-group">
+                                        <label class="control-label" for="mName">MI</label>
+                                        <input id="mName" name="midInitial" class="form-control input-normal"
+                                               ng-model="middleName">
+                                        <p class="help-block"> User Middle Initial</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group required" show-errors>
+                                        <label class="control-label" for="email">Email</label>
+                                        <input type="email" id="email" name="email" class="form-control input-normal"
+                                               required
+                                               ng-model="emailAddress">
+                                        <p class="help-block"> Email Address </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="form-group required" show-errors>
+                                        <label class="control-label " for="dob">Date Of Birth</label>
+                                        <input id="dob" name="dateOfBirth" class="form-control input-normal" required
+                                               ng-model="dob">
+                                        <p class="help-block"> User Date of Birth </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-2">
+                                    <div class="form-group">
+                                        <label for="age">Age</label>
+                                        <input id="age" name="age" class="form-control input-normal" readonly="true"
+                                               ng-model="age">
+                                        <p class="help-block"> User Age </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="radios">Gender</label>
+                                    <div class="form-group" id="radios">
+                                        <label class="radio-inline" for="radio-1">
+                                            <input type="radio" id="radio-1" name="radios" ng-model="gender"
+                                                   value="male">
+                                            Male
+                                        </label>
+                                        <label class="radio-inline" for="radio-2">
+                                            <input type="radio" id="radio-2" name="radios" ng-model="gender"
+                                                   value="female">
+                                            Female
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>
+                                Address Information
+                            </legend>
+
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <div class="form-group" show-errors>
+                                        <label for="address">Address</label>
+                                        <input id="address" name="address" class="form-control input-normal"
+                                               ng-model="address">
+                                        <p class="help-block"> User Street Address</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <div class="form-group required" show-errors>
+                                        <label class="control-label" for="city">City</label>
+                                        <input id="city" name="city" class="form-control input-normal" required
+                                               ng-model="city">
+                                        <p class="help-block"> City </p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group required">
+                                        <label class="control-label" for="state">State</label>
+                                        <select name="state" id="state" class="form-control input-normal" required
+                                                ng-model="state">
+                                            <option value="1">New Jersey</option>
+                                            <option value="2">New York</option>
+                                            <option value="3">Pennsylvania</option>
+                                            <option value="4">Delaware</option>
+                                        </select>
+                                        <p class="help-block"> State </p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group">
+                                        <label for="zip">Zip Code</label>
+                                        <input id="zip" name="zipCode" class="form-control input-normal"
+                                               ng-model="zipCode">
+                                        <p class="help-block"> Zip Code</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+
+                            <div class="row">
+
+                            </div>
+                        </fieldset>
+                        <button class="btn btn-primary" ng-click="save()">Add User</button>
+                    </form>
+                </div>
+                <div class="col-sm-2 sidenav">
+                    <div class="well">
+                        <p>Message</p>
                     </div>
-
-                    <div class="col-sm-5">
-                        <div class="form-group required" show-errors>
-                            <label class="control-label" for="lName">Last Name</label>
-                            <input id="lName" name="lastName" class="form-control input-normal" required ng-model="lastName">
-                            <p class="help-block"> User Last Name</p>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-2">
-                        <div class="form-group">
-                            <label class="control-label" for="mName">MI</label>
-                            <input id="mName" name="midInitial" class="form-control input-normal" ng-model="middleName">
-                            <p class="help-block"> User Middle Initial</p>
-                        </div>
+                    <div class="well">
+                        <p>Message</p>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="form-group required" show-errors>
-                            <label class="control-label" for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control input-normal" required
-                                   ng-model="emailAddress">
-                            <p class="help-block"> Email Address </p>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3">
-                        <div class="form-group required" show-errors>
-                            <label class="control-label " for="dob">Date Of Birth</label>
-                            <input id="dob" name="dateOfBirth" class="form-control input-normal" required
-                                   ng-model="dob">
-                            <p class="help-block"> User Date of Birth </p>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-2">
-                        <div class="form-group">
-                            <label for="age">Age</label>
-                            <input id="age" name="age" class="form-control input-normal" readonly="true"
-                                   ng-model="age">
-                            <p class="help-block"> User Age </p>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3">
-                        <label for="radios">Gender</label>
-                        <div class="form-group" id="radios">
-                            <label class="radio-inline" for="radio-1">
-                                <input type="radio" id="radio-1" name="radios" ng-model="gender" value="male">
-                                Male
-                            </label>
-                            <label class="radio-inline" for="radio-2">
-                                <input type="radio" id="radio-2" name="radios" ng-model="gender" value="female">
-                                Female
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-            </fieldset>
-
-            <fieldset>
-                <legend>
-                    Address Information
-                </legend>
-
-                <div class="row">
-                    <div class="col-sm-5">
-                        <div class="form-group" show-errors>
-                            <label for="address">Address</label>
-                            <input id="address" name="address" class="form-control input-normal" ng-model="address">
-                            <p class="help-block"> User Street Address</p>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3">
-                        <div class="form-group required" show-errors>
-                            <label class="control-label" for="city">City</label>
-                            <input id="city" name="city" class="form-control input-normal" required ng-model="city">
-                            <p class="help-block"> City </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="form-group required">
-                            <label class="control-label" for="state">State</label>
-                            <select name="state" id="state" class="form-control input-normal" required ng-model="state">
-                                <option value="1">New Jersey</option>
-                                <option value="2">New York</option>
-                                <option value="3">Pennsylvania</option>
-                                <option value="4">Delaware</option>
-                            </select>
-                            <p class="help-block"> State </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="form-group">
-                            <label for="zip">Zip Code</label>
-                            <input id="zip" name="zipCode" class="form-control input-normal" ng-model="zipCode">
-                            <p class="help-block"> Zip Code</p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-
-                <div class="row">
-
-                </div>
-            </fieldset>
-            <button class="btn btn-primary" ng-click="save()">Add User</button>
-        </form>
+            </div>
+        </div>
     </div>
-
 </section>
+
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins)
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script> -->
