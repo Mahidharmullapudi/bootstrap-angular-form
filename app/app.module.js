@@ -1,6 +1,6 @@
 (function () {
 
-    var ValidationApp = angular.module('ValidationApp', []);
+    var ValidationApp = angular.module('ValidationApp', ['CartList']);
 
     var MyCtrl = function ($scope) {
         var _this = this;
@@ -24,7 +24,7 @@
         $scope.$broadcast('show-errors-check-validity');
         if ($scope.userForm.$valid) {
             alert("Form saved");
-            $scope.$broadcast('reset-errors');
+
         } else{
             alert("Please fill in the required fields before submitting the form");
         }
@@ -50,7 +50,7 @@
                 // only apply the has-error class after the user leaves the text box
                 inputNgEl.bind('blur', function () {
                     el.toggleClass('has-error', MyCtrl[inputName].$invalid);
-                })
+                });
 
                 scope.$on('show-errors-check-validity', function () {
                     el.toggleClass('has-error', MyCtrl[inputName].$invalid);
@@ -66,5 +66,6 @@
             }
         }
     });
+
 
 })();

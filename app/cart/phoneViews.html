@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Phones Display</title>
+
+    <link href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+
+    <script src="../../bower_components/angular/angular.min.js"></script>
+    <script src="../app.module.js"></script>
+    <script src="cart-list.module.js"></script>
+
+</head>
+<body ng-app="ValidationApp" ng-controller="CartController">
+<nav>
+
+</nav>
+    <h1> Angular Shopping Cart </h1>
+    <ul>
+        <li ng-repeat="phone in phones">
+            <span> {{phone.name}}  </span>
+            <p>{{phone.snippet}}</p>
+        </li>
+    </ul>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
